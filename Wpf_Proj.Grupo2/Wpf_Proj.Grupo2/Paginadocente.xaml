@@ -1,0 +1,186 @@
+﻿<Window x:Class="Wpf_Proj.Grupo2.Paginadocente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Proj.Grupo2"
+        mc:Ignorable="d"
+        Title="Paginadocente" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="projetoViewSource" d:DesignSource="{d:DesignInstance {x:Type local:Projeto}, CreateList=True}"/>
+        <CollectionViewSource x:Key="publicacaoViewSource" d:DesignSource="{d:DesignInstance {x:Type local:Publicacao}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+
+                </Grid.RowDefinitions>
+                <Grid Grid.RowSpan="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="1">
+                        <Grid.ColumnDefinitions >
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                    <TextBox x:Name="inserir_utilizador" Grid.Row="0" Grid.Column="1" Width="85" Height="15" HorizontalAlignment="Stretch"/>
+                    <PasswordBox x:Name="inserir_senha" Grid.Row="1" Grid.Column="1" Width="85" Height="15"  HorizontalAlignment="Stretch"/>
+                    <Button x:Name="login" Grid.Column="0" Grid.RowSpan="2" Width="35" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Login" Click="login_Click"/>
+                    <Label x:Name="Utilizador" Content="Utilizador" HorizontalAlignment="Right" Width="65" Grid.Row="0" />
+                    <Label x:Name="senha" Content="Senha" HorizontalAlignment="Right" Width="51" Grid.Row="1"/>
+                    <Button x:Name="B_sair" Content="SAIR" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30" FontSize="15" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" Visibility="Hidden" Click="B_sair_Click"/>
+
+                </Grid>
+
+            </Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+        </Grid>
+        <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition />
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="NOME" x:Name="nome_txt" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" FontSize="25" HorizontalAlignment="Left" FontWeight="Black" Grid.ColumnSpan="2" Width="auto"  />
+            <TextBox Text="NOME" x:Name="nome_txt_edit" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" FontSize="25" HorizontalAlignment="Left" FontWeight="Black" Grid.ColumnSpan="2" Width="350" Visibility="Hidden" />
+            <Label Content="Função:" Grid.Column="2" Grid.Row="3" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30"  Width="61" />
+            <Label Content="Email:" Grid.Column="2" Grid.Row="4" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30"  Width="49" />
+            <Image Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Grid.RowSpan="5" Source="/imagens/user_icon.png" Width="174" />
+            <Button Grid.Row="3"  Grid.Column="0" HorizontalAlignment="Right" Content="EDITAR PERFIL" x:Name="editar_perfil" Width="auto" Visibility="Hidden" Click="editar_perfil_Click"/>
+            <Button Grid.Row="2"  Grid.Column="0" HorizontalAlignment="Right" Content="EDITAR DEPARTAMENTO" x:Name="dept_coor" Width="auto" Visibility="Hidden" Click="dept_coor_Click" />
+            <Button Grid.Row="2"  Grid.Column="0" HorizontalAlignment="Right" Content="EDITAR DEPARTAMENTOS" x:Name="dept_dir" Width="auto" Visibility="Hidden" Click="dept_dir_Click" />
+            <Button Grid.Row="1"  Grid.Column="0" HorizontalAlignment="Right" Content="EDITAR ESCOLA" x:Name="esc_dir" Width="auto" Visibility="Hidden" Click="esc_dir_Click" />
+            <Button Grid.Row="4"  Grid.Column="0" HorizontalAlignment="Right" Content="confirmar" x:Name="editar_perfil_confirm" Width="auto" Visibility="Hidden" Click="editar_perfil_confirm_Click"/>
+            <TextBlock Grid.Column="3" Grid.Row="3" Text="" x:Name="txt_Funcao" FontSize="15" VerticalAlignment="Center" Height="19" HorizontalAlignment="Left" />
+            <TextBlock Grid.Column="3" Grid.Row="4" Text="" x:Name="txt_email" FontSize="15" VerticalAlignment="Center" Height="19" HorizontalAlignment="Left" />
+            <TextBox Grid.Column="3" Grid.Row="4" Text="" x:Name="txt_email_edit" FontSize="15" VerticalAlignment="Center" Height="19" HorizontalAlignment="Left" Width="300" Visibility="Hidden" />
+            <Rectangle Fill="#FFBFBFBF" x:Name="erro_space" HorizontalAlignment="Center" Height="125"  Grid.Row="2" Grid.RowSpan="4" VerticalAlignment="Top" Width="263"  Visibility="Hidden" Grid.ColumnSpan="3"/>
+            <Label Content="Os dados estão errados" x:Name="erro_text"  HorizontalContentAlignment="Center" Grid.RowSpan="4" FontSize="17" HorizontalAlignment="Center"  Grid.Row="2"  Visibility="Hidden" VerticalAlignment="Top" Height="31" Width="262" Grid.ColumnSpan="3"/>
+            <Button x:Name="botão_continuar" Content="Continuar" HorizontalAlignment="Center" Grid.Row="2" Grid.RowSpan="4" VerticalAlignment="Center" Width="143" Height="36" Visibility="Hidden" Grid.ColumnSpan="3" Click="botão_continuar_Click"/>
+        </Grid>
+
+        <Image Source ="/Imagens/IPB(2).png" HorizontalAlignment="Left" Grid.Row="0"  Width="183" Margin="36,0,0,0" />
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" Width="auto" />
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="6"/>
+
+        <Grid Grid.Row="6" DataContext="{StaticResource publicacaoViewSource}" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border BorderBrush="Black" BorderThickness="2" Grid.Column="0" />
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition  Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Border BorderBrush="Black" BorderThickness="2" Grid.Column="1" Grid.RowSpan="4" />
+                <Menu Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" >
+                    <TextBlock x:Name="pub"  Text="PUBLICAÇÕES" Width="auto" FontSize="15" HorizontalAlignment="Right" />
+                    <MenuItem x:Name="menu_pub" Header="Editar"  Width="auto" FontSize="15" Click="menu_pub_Click" Visibility="Hidden"/>
+                </Menu>
+                <DataGrid x:Name="publicacaoDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Grid.Column="0" Grid.Row="1" Grid.RowSpan="4" RowDetailsVisibilityMode="VisibleWhenSelected">
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn x:Name="data_finalizacaoColumn" Header="data finalizacao" Width="SizeToHeader">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <DatePicker SelectedDate="{Binding data_finalizacao, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn x:Name="idColumn1" Binding="{Binding id}" Header="id" Width="SizeToHeader"/>
+                        <DataGridTextColumn x:Name="local_realizacaoColumn1" Binding="{Binding local_realizacao}" Header="local realizacao" Width="SizeToHeader"/>
+                        <DataGridTextColumn x:Name="tipoColumn" Binding="{Binding tipo}" Header="tipo" Width="SizeToHeader"/>
+                        <DataGridTextColumn x:Name="tituloColumn1" Binding="{Binding titulo}" Header="titulo" Width="SizeToHeader"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+
+            </Grid>
+            <Grid Grid.Column="0" DataContext="{StaticResource projetoViewSource}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition  Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Menu Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" >
+                    <TextBlock x:Name="proj"  Text="PROJETOS" Width="auto" FontSize="15" HorizontalAlignment="Right" />
+                    <MenuItem x:Name="menu_proj" Header="Editar" Click="proj_Click" Width="auto" FontSize="15" Visibility="Hidden"/>
+                </Menu>
+                <DataGrid x:Name="projetoDataGrid" AutoGenerateColumns="False" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" EnableRowVirtualization="True" ItemsSource="{Binding}"  Grid.RowSpan="4" RowDetailsVisibilityMode="VisibleWhenSelected">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="idColumn" Binding="{Binding id}" Header="id" Width="SizeToHeader"/>
+                        <DataGridTextColumn x:Name="local_realizacaoColumn" Binding="{Binding local_realizacao}" Header="local realizacao" Width="SizeToHeader"/>
+                        <DataGridTextColumn x:Name="tituloColumn" Binding="{Binding titulo}" Header="titulo" Width="SizeToHeader"/>
+                        <DataGridTextColumn x:Name="valor_financiadoColumn" Binding="{Binding valor_financiado}" Header="valor financiado" Width="SizeToHeader"/>
+                        <DataGridTemplateColumn x:Name="data_inicioColumn" Header="data inicio" Width="SizeToHeader">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <DatePicker SelectedDate="{Binding data_inicio, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn x:Name="data_fimColumn" Header="data fim" Width="SizeToHeader">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <DatePicker SelectedDate="{Binding data_fim, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </Grid>
+
+        </Grid>
+        <Button x:Name="B_Voltar" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" Width="17" Height="18" Margin="10,26,0,26" Click="B_Voltar_Click" RenderTransformOrigin="0.412,-0.111" >
+            <Button.Background>
+                <ImageBrush ImageSource="Voltar.png"/>
+            </Button.Background>
+        </Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="209*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="Auto" MinHeight="1"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="139*" />
+
+        </Grid.RowDefinitions>
+
+    </Grid>
+</Window>

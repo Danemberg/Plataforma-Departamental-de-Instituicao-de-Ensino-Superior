@@ -1,0 +1,49 @@
+﻿<Window x:Class="Wpf_Proj.Grupo2.Pagina_Editar_projeto_2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Proj.Grupo2"
+        mc:Ignorable="d"
+        Title="Pagina_Editar_projeto_2" Height="450" Width="800">
+    <Grid>
+        <Image Source="/Imagens/Images (4).png" Margin="628,23,127,366" RenderTransformOrigin="0.681,1.048" />
+
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="0" Margin="0,0,0,349">
+
+        </Border>
+        <Image Source="Imagens/IPB(2).png" Margin="1,-2,440,346" />
+
+        <Label Content="TÍTULO DO PROJETO"  HorizontalAlignment="Left" Margin="42,89,0,299"/>
+        <Label Content="DESCRIÇÃO"  HorizontalAlignment="Left"  Margin="39,144,0,244"/>
+        <Label Content="AUTOR/ES"  HorizontalAlignment="Left"  Margin="40,194,0,194"/>
+        <Label Content="LOCAL REALIZAÇÃO" HorizontalAlignment="Left"  Margin="38,241,0,147"/>
+        <Label Content="INSTITUIÇÃO"  HorizontalAlignment="Left"  Margin="40,289,0,99"/>
+        <Label Content="VALOR FINANCIADO"  HorizontalAlignment="Left"  Margin="40,342,0,46"/>
+
+        <TextBox x:Name="txt_Autor" BorderBrush="Black" Margin="44,214,472,171" />
+        <TextBox x:Name="txt_Título_Projeto" BorderBrush="Black" Margin="43,108,194,277" />
+        <TextBox x:Name="txt_Descrição" BorderBrush="Black" Margin="46,167,250,218" />
+        <TextBox x:Name="txt_Local_Realização" BorderBrush="Black" Margin="46,266,499,119" />
+        <TextBox x:Name="txt_Instituiçao" BorderBrush="Black" Margin="47,311,433,74" />
+        <TextBox x:Name="txt_Valor_Financiado" BorderBrush="Black" Margin="46,367,622,18" Text="€" />
+
+        <DatePicker HorizontalAlignment="Left" Margin="482,256,0,0" VerticalAlignment="Top" Height="25" Width="80"/>
+        <DatePicker HorizontalAlignment="Left" Margin="577,256,0,0" VerticalAlignment="Top" Height="25" Width="81"/>
+        <Label Content="DADOS INICIO" FontSize="11" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="479,228,0,160"/>
+        <Label Content="DADOS FIM" FontSize="11" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="581,231,0,157"/>
+        <Button x:Name="botao_salvar" Content="SALVAR" HorizontalAlignment="Left" Margin="640,357,0,0" VerticalAlignment="Top" Width="100" Height="27"/>
+        <Button x:Name="botao_sair" Content="SAIR" HorizontalAlignment="Left" Margin="674,23,0,0" VerticalAlignment="Top" Width="102" Height="27" />
+        <Button  Content="" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="26" Height="23">
+            <Button.Background>
+                <ImageBrush ImageSource="Imagens/Voltar.png"/>
+            </Button.Background>
+        </Button>
+        <Image Source="/Imagens/Images (5).png" Margin="575,13,158,356" />
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="150" Margin="232,145,0,0"  VerticalAlignment="Top" Width="273"/>
+        <Label Content="O projeto foi editado &#xD;&#xA;com sucesso" FontSize="18" HorizontalAlignment="Left" Margin="286,157,0,0" VerticalAlignment="Top" Height="59" Width="201"/>
+        <Button Content="VOLTAR A HOME" HorizontalAlignment="Left" Margin="303,236,0,0" VerticalAlignment="Top" Width="137" Height="29"/>
+
+
+    </Grid>
+</Window>

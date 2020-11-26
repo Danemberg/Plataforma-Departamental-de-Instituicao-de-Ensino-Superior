@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFEFD403-C871-4486-B990-38E6352A5B5F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Wpf_Proj.Grupo2</RootNamespace>
+    <AssemblyName>Wpf_Proj.Grupo2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Autoria_Projeto.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Autoria_Publicacao.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Coordenador.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Departamento.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Diretor.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Docente.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Escola.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Instituicao.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina _principal_erro_doc.xaml.cs">
+      <DependentUpon>Pagina _principal_erro_doc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaDepartamentoAdm.xaml.cs">
+      <DependentUpon>PaginaDepartamentoAdm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginadocente.xaml.cs">
+      <DependentUpon>Paginadocente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaDocenteAdm.xaml.cs">
+      <DependentUpon>PaginaDocenteAdm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaEscolaAdm.xaml.cs">
+      <DependentUpon>PaginaEscolaAdm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Admin User.xaml.cs">
+      <DependentUpon>Pagina_Admin User.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Admin.xaml.cs">
+      <DependentUpon>Pagina_Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Departamento_Coordenador.xaml.cs">
+      <DependentUpon>Pagina_Departamento_Coordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Departamento_Diretor.xaml.cs">
+      <DependentUpon>Pagina_Departamento_Diretor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Editar Informação perfil 2.xaml.cs">
+      <DependentUpon>Pagina_Editar Informação perfil 2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Editar Informação Perfil.xaml.cs">
+      <DependentUpon>Pagina_Editar Informação Perfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Editar projeto 2 .xaml.cs">
+      <DependentUpon>Pagina_Editar projeto 2 .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Editar Publicação 2.xaml.cs">
+      <DependentUpon>Pagina_Editar Publicação 2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Escola_Diretor.xaml.cs">
+      <DependentUpon>Pagina_Escola_Diretor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_informac.xaml.cs">
+      <DependentUpon>Pagina_informac.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_principal erro.xaml.cs">
+      <DependentUpon>Pagina_principal erro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plataforma Departamental.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Projeto.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Publicacao.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Página Editar Projeto.xaml.cs">
+      <DependentUpon>Página Editar Projeto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Página _Editar_Publicação.xaml.cs">
+      <DependentUpon>Página _Editar_Publicação.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Página_Admin User confirm.xaml.cs">
+      <DependentUpon>Página_Admin User confirm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Página_Principal erro admin.xaml.cs">
+      <DependentUpon>Página_Principal erro admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilizador.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel.cs" />
+    <Compile Include="_44160_Projeto_Final_DA_2020DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_44160_Projeto_Final_DA_2020DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_44160_Projeto_Final_DA_2020DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_44160_Projeto_Final_DA_2020DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pagina _principal_erro_doc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginadepartamento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PaginaDepartamentoAdm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginadocente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PaginaDocenteAdm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginaescola.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PaginaEscolaAdm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pagina_Admin User.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pagina_Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagina_Departamento_Coordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagina_Departamento_Diretor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagina_Editar Informação perfil 2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagina_Editar Informação Perfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagina_Editar projeto 2 .xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagina_Editar Publicação 2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagina_Escola_Diretor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagina_informac.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagina_principal erro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Página Editar Projeto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Página _Editar_Publicação.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Página_Admin User confirm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Página_Principal erro admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Paginadepartamento.xaml.cs">
+      <DependentUpon>Paginadepartamento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginaescola.xaml.cs">
+      <DependentUpon>Paginaescola.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plataforma Departamental.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Plataforma Departamental.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Plataforma Departamental.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Plataforma Departamental.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Plataforma Departamental.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Plataforma Departamental.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="Plataforma Departamental.edmx.diagram">
+      <DependentUpon>Plataforma Departamental.edmx</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="_44160_Projeto_Final_DA_2020DataSet.xsc">
+      <DependentUpon>_44160_Projeto_Final_DA_2020DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_44160_Projeto_Final_DA_2020DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_44160_Projeto_Final_DA_2020DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_44160_Projeto_Final_DA_2020DataSet.xss">
+      <DependentUpon>_44160_Projeto_Final_DA_2020DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_44160_Projeto_Final_DA_2020DataSet1.xsc">
+      <DependentUpon>_44160_Projeto_Final_DA_2020DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_44160_Projeto_Final_DA_2020DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_44160_Projeto_Final_DA_2020DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_44160_Projeto_Final_DA_2020DataSet1.xss">
+      <DependentUpon>_44160_Projeto_Final_DA_2020DataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\IPB%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\IPB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\ipb%283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\ipb_estig.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\ipb_21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Images %284%29.png" />
+    <Resource Include="Imagens\Images %285%29.png" />
+    <Resource Include="Imagens\user.png" />
+    <Resource Include="Images %284%29.png" />
+    <Resource Include="Imagens\Inform.png" />
+    <Resource Include="Imagens\.png" />
+    <Resource Include="Imagens\Ipb...png" />
+    <Content Include="Plataforma Departamental.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Plataforma Departamental.Context.cs</LastGenOutput>
+      <DependentUpon>Plataforma Departamental.edmx</DependentUpon>
+    </Content>
+    <Content Include="Plataforma Departamental.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Plataforma Departamental.edmx</DependentUpon>
+      <LastGenOutput>Plataforma Departamental.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

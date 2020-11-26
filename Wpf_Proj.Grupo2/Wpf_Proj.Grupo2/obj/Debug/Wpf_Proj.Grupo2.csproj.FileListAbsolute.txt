@@ -1,0 +1,64 @@
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\bin\Debug\Wpf_Proj.Grupo2.exe.config
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\bin\Debug\Wpf_Proj.Grupo2.exe
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\bin\Debug\Wpf_Proj.Grupo2.pdb
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\bin\Debug\EntityFramework.dll
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\bin\Debug\EntityFramework.xml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\MainWindow.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Paginadepartamento.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\PaginaDepartamentoAdm.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Paginadocente.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\PaginaDocenteAdm.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Paginaescola.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Admin User.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Editar Informação Perfil.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_principal erro.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Página Editar Projeto.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Página_Admin User confirm.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Página_Principal erro admin.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\App.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Wpf_Proj.Grupo2_Content.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Wpf_Proj.Grupo2_MarkupCompile.cache
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Wpf_Proj.Grupo2_MarkupCompile.lref
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\MainWindow.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Paginadepartamento.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\PaginaDepartamentoAdm.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Paginadocente.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\PaginaDocenteAdm.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Paginaescola.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Admin User.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Editar Informação Perfil.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_principal erro.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Página Editar Projeto.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Página_Admin User confirm.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Página_Principal erro admin.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Wpf_Proj.Grupo2.g.resources
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Wpf_Proj.Grupo2.Properties.Resources.resources
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Wpf_Proj.Grupo2.csproj.GenerateResource.cache
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Wpf_Proj.Grupo2.csproj.CopyComplete
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Wpf_Proj.Grupo2.exe
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Wpf_Proj.Grupo2.pdb
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina _principal_erro_doc.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Admin.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Departamento_Coordenador.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Departamento_Diretor.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Editar Informação perfil 2.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Editar projeto 2 .g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Editar Publicação 2.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Escola_Diretor.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_informac.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina _principal_erro_doc.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Admin.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Departamento_Coordenador.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Departamento_Diretor.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Editar Informação perfil 2.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Editar projeto 2 .baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Editar Publicação 2.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Escola_Diretor.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_informac.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\PaginaEscolaAdm.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Página _Editar_Publicação.g.cs
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\PaginaEscolaAdm.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Página _Editar_Publicação.baml
+C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Wpf_Proj.Grupo2.csproj.CoreCompileInputs.cache

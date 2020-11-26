@@ -1,0 +1,114 @@
+﻿<Window x:Class="Wpf_Proj.Grupo2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Proj.Grupo2"
+        mc:Ignorable="d"
+        Title="MainWindow" Loaded="Window_Loaded">
+
+    <Grid>
+
+        <Grid Margin="0,0,0,7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="537*"/>
+                <ColumnDefinition Width="223*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.RowSpan="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="inserir_utilizador" Grid.Row="0" Grid.Column="1" Width="85" Height="15" HorizontalAlignment="Stretch"/>
+                    <PasswordBox x:Name="inserir_senha" Grid.Row="1" Grid.Column="1" Width="85" Height="15"  HorizontalAlignment="Stretch"/>
+                    <Button x:Name="login" Grid.Column="0" Grid.RowSpan="2" Width="35" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Login" Click="login_Click"/>
+                    <Label x:Name="Utilizador" Content="Utilizador" HorizontalAlignment="Right" Width="65" Grid.Row="0"  />
+                    <Label x:Name="senha" Content="Senha" HorizontalAlignment="Right" Width="51" Grid.Row="1"/>
+                    <Button x:Name="B_sair" Content="SAIR" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30" FontSize="15" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" Visibility="Hidden" Click="B_sair_Click"/>
+
+                </Grid>
+
+            </Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+        </Grid>
+        <Image Source ="/Imagens/IPB(2).png" HorizontalAlignment="Left" Grid.Row="0" />
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="0" />
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="ESCOLAS" FontSize="24"  Grid.Row="0" />
+            <ComboBox  ItemsSource="{Binding}" SelectedValuePath="id" DisplayMemberPath="nome" x:Name ="Menu_Escolas" Grid.Row="1" SelectionChanged="Menu_Escolas_SelectionChanged" />
+
+        </Grid>
+
+
+
+
+        <Image Source="/Imagens/Inform.png" Grid.Row="5" />
+        <Button x:Name="botão_inform" Content="+ Informações" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Width="101" Click="botão_inform_Click" Height="22"/>
+        <Image Source="/Imagens/IPB.png" Grid.Row="2" HorizontalAlignment="Stretch" />
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="6" Grid.RowSpan="7"/>
+        <TextBlock  Grid.Row="6" HorizontalAlignment="Stretch" Text="O Instituto Politécnico de Bragança (IPB) é uma instituição pública de ensino superior que tem por missão a criação, transmissão e difusão do conhecimento técnico-científico." />
+        <TextBlock Grid.Row="7" HorizontalAlignment="Left" Text="Presidente "/>
+        <TextBlock Grid.Row="8" HorizontalAlignment="Left" Text="Orlando Isidoro Afonso Rodrigues"/>
+        <TextBlock Grid.Row="9" HorizontalAlignment="Center" Text="Campus de Santa Apolónia- 5300-253 BRAGANÇA"/>
+        <TextBlock Grid.Row="10" HorizontalAlignment="Left" Text="Vice-Presidentes"/>
+        <TextBlock Grid.Row="10" HorizontalAlignment="Center" Text="Tel: (+351) 273 303 200 / (+351) 273 331 570"/>
+        <TextBlock Grid.Row="11" HorizontalAlignment="Left" Text="Luis Manuel Santos Pais"/>
+        <TextBlock Grid.Row="11" HorizontalAlignment="Center" Text="Fax: (+351) 273 325 405"/>
+        <TextBlock Grid.Row="12" HorizontalAlignment="Left" Text="Albano Agostinho Gomes Alves"/>
+        <TextBlock Grid.Row="12" HorizontalAlignment="Center" Text="E-mail: suporte@ipb.pt"/>
+        <Grid Grid.Row="6">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="9*"/>
+            </Grid.ColumnDefinitions>
+            
+        </Grid>
+        <Rectangle Fill="#FFBFBFBF" Visibility="Hidden"  x:Name="erro_space" Height="125" HorizontalAlignment="Center" Grid.Row="5" Grid.RowSpan="2" VerticalAlignment="Top" Width="263"/>
+        <Label Content="Os dados estão errados" Visibility="Hidden" x:Name="erro_text" HorizontalContentAlignment="Center" FontSize="17" HorizontalAlignment="Center"  Grid.Row="5" VerticalAlignment="Top" Height="31" Width="262"/>
+        <Button x:Name="botão_continuar" Visibility="Hidden" Content="CONTINUAR" HorizontalAlignment="Center"  Grid.Row="5" VerticalAlignment="Center" Width="143" Height="36" Click="botão_continuar_Click" />
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+
+
+
+
+
+    </Grid>
+</Window>

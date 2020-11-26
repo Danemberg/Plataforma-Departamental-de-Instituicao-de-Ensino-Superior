@@ -1,0 +1,134 @@
+﻿<Window x:Class="Wpf_Proj.Grupo2.Paginaescola"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Proj.Grupo2"
+        mc:Ignorable="d"
+        Title="Paginaescola" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="537*"/>
+                <ColumnDefinition Width="223*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.RowSpan="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="inserir_utilizador" Grid.Row="0" Grid.Column="1" Width="85" Height="15" HorizontalAlignment="Stretch"/>
+                    <PasswordBox x:Name="inserir_senha" Grid.Row="1" Grid.Column="1" Width="85" Height="15"  HorizontalAlignment="Stretch"/>
+                    <Button x:Name="login" Grid.Column="0" Grid.RowSpan="2" Width="35" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Login" Click="login_Click"/>
+                    <Label x:Name="Utilizador" Content="Utilizador" HorizontalAlignment="Right" Width="65" Grid.Row="0" />
+                    <Label x:Name="senha" Content="Senha" HorizontalAlignment="Right" Width="51" Grid.Row="1"/>
+                    <Button x:Name="B_sair" Content="SAIR" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30" FontSize="15" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" Visibility="Hidden" Click="B_sair_Click"/>
+                </Grid>
+
+            </Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBox x:Name="nome_escola" Text="" Grid.Column="0" Grid.Row="1" FontSize="35" HorizontalAlignment="Stretch"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="DEPARTAMENTOS" HorizontalAlignment="Center" FontSize="24"  Grid.Row="0"  />
+            <ComboBox ItemsSource="{Binding}" SelectedValuePath="id" DisplayMemberPath="nome" x:Name ="Menu_DEPT" Grid.Row="1" Grid.Column="1" SelectionChanged="Menu_DEPT_SelectionChanged"  />
+        </Grid>
+
+        <Image Source ="/Imagens/IPB(2).png" HorizontalAlignment="Left" Grid.Row="0" Margin="17,0,0,0" Width="183" />
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="0"/>
+        <Image Source="/Imagens/IPB.png" Grid.Row="2" HorizontalAlignment="Stretch" />
+        <Image Source="/Imagens/Inform.png" Grid.Row="5" />
+        <Button x:Name="botão_inform" Content="+ Informações" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Width="101" Click="botão_inform_Click" Height="22"/>
+
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="9*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="6" Grid.RowSpan="7"/>
+        
+
+        <Grid Grid.Row="6" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.Column="0" />
+            <Border BorderBrush="Black" BorderThickness="2" Grid.Column="1" >
+                <TextBlock Text="A Escola , criada em 1990, desenvolve a sua missão de formação e de investigação/desenvolvimento nas áreas ..."  Grid.Row="1"  HorizontalAlignment="Left"   />
+
+
+            </Border>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition  Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="DIRETOR" Grid.Column="1" FontSize="14" HorizontalAlignment="Left" FontWeight="Black"/>
+
+                <Label Content="Nome:" Grid.Column="1" Grid.Row="1" FontSize="11" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="Email:" Grid.Column="1" Grid.Row="2" FontSize="11" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock x:Name="nome_dir" Text="" Grid.Column="1" Grid.Row="1" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock x:Name="email_dir" Text="" Grid.Column="1" Grid.Row="2" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" Source="/imagens/user_icon.png"/>
+            </Grid>
+
+        </Grid>
+        <Button x:Name="B_Voltar" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="23" Height="20" Margin="2,21,0,0" Click="B_Voltar_Click" RenderTransformOrigin="1.882,0.444">
+            <Button.Background>
+                <ImageBrush ImageSource="Voltar.png"/>
+            </Button.Background>
+
+        </Button>
+        
+        <Rectangle Fill="#FFBFBFBF" x:Name="erro_space" HorizontalAlignment="Center" Height="110" Visibility="Hidden" Grid.Row="5" Grid.RowSpan="5" VerticalAlignment="Top" Width="263"/>
+        <Label Content="Os dados estão errados" x:Name="erro_text" HorizontalContentAlignment="Center" Visibility="Hidden" FontSize="17" HorizontalAlignment="Center"  Grid.Row="5" VerticalAlignment="Top" Height="31" Width="210"/>
+        <Button x:Name="botão_continuar" Content="Continuar" Visibility="Hidden" HorizontalAlignment="Center"  Grid.Row="5" VerticalAlignment="Center" Width="143" Height="36" Click="botão_continuar_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="2*" />
+
+        </Grid.RowDefinitions>
+
+
+
+
+
+    </Grid>
+</Window>

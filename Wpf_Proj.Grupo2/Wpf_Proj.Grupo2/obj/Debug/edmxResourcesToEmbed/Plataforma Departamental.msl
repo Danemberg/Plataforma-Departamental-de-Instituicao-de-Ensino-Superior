@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Grupo2_Plataforma_DepartamentalModelStoreContainer" CdmEntityContainer="Entities_Grupo2_Plataforma_Departamental">
+    <EntitySetMapping Name="Coordenadors">
+      <EntityTypeMapping TypeName="Grupo2_Plataforma_DepartamentalModel.Coordenador">
+        <MappingFragment StoreEntitySet="Coordenador">
+          <ScalarProperty Name="id_docente" ColumnName="id_docente" />
+          <ScalarProperty Name="id_departamento" ColumnName="id_departamento" />
+          <ScalarProperty Name="data_inicio" ColumnName="data_inicio" />
+          <ScalarProperty Name="data_fim" ColumnName="data_fim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departamentoes">
+      <EntityTypeMapping TypeName="Grupo2_Plataforma_DepartamentalModel.Departamento">
+        <MappingFragment StoreEntitySet="Departamento">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_escola" ColumnName="id_escola" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diretors">
+      <EntityTypeMapping TypeName="Grupo2_Plataforma_DepartamentalModel.Diretor">
+        <MappingFragment StoreEntitySet="Diretor">
+          <ScalarProperty Name="id_docente" ColumnName="id_docente" />
+          <ScalarProperty Name="id_escola" ColumnName="id_escola" />
+          <ScalarProperty Name="data_inicio" ColumnName="data_inicio" />
+          <ScalarProperty Name="data_fim" ColumnName="data_fim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Docentes">
+      <EntityTypeMapping TypeName="Grupo2_Plataforma_DepartamentalModel.Docente">
+        <MappingFragment StoreEntitySet="Docente">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_utilizador" ColumnName="id_utilizador" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="id_departamento" ColumnName="id_departamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Escolas">
+      <EntityTypeMapping TypeName="Grupo2_Plataforma_DepartamentalModel.Escola">
+        <MappingFragment StoreEntitySet="Escola">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="sigla" ColumnName="sigla" />
+          <ScalarProperty Name="id_instituição" ColumnName="id_instituição" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instituicaos">
+      <EntityTypeMapping TypeName="Grupo2_Plataforma_DepartamentalModel.Instituicao">
+        <MappingFragment StoreEntitySet="Instituicao">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projetoes">
+      <EntityTypeMapping TypeName="Grupo2_Plataforma_DepartamentalModel.Projeto">
+        <MappingFragment StoreEntitySet="Projeto">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+          <ScalarProperty Name="data_inicio" ColumnName="data_inicio" />
+          <ScalarProperty Name="data_fim" ColumnName="data_fim" />
+          <ScalarProperty Name="local_realizacao" ColumnName="local_realizacao" />
+          <ScalarProperty Name="valor_financiado" ColumnName="valor_financiado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Publicacaos">
+      <EntityTypeMapping TypeName="Grupo2_Plataforma_DepartamentalModel.Publicacao">
+        <MappingFragment StoreEntitySet="Publicacao">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+          <ScalarProperty Name="data_finalizacao" ColumnName="data_finalizacao" />
+          <ScalarProperty Name="local_realizacao" ColumnName="local_realizacao" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utilizadors">
+      <EntityTypeMapping TypeName="Grupo2_Plataforma_DepartamentalModel.Utilizador">
+        <MappingFragment StoreEntitySet="Utilizador">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Autoria_Publicacao">
+      <EntityTypeMapping TypeName="Grupo2_Plataforma_DepartamentalModel.Autoria_Publicacao">
+        <MappingFragment StoreEntitySet="Autoria_Publicacao">
+          <ScalarProperty Name="id_autor" ColumnName="id_autor" />
+          <ScalarProperty Name="id_publicacao" ColumnName="id_publicacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Autoria_Projeto">
+      <EntityTypeMapping TypeName="Grupo2_Plataforma_DepartamentalModel.Autoria_Projeto">
+        <MappingFragment StoreEntitySet="Autoria_Projeto">
+          <ScalarProperty Name="id_projeto" ColumnName="id_projeto" />
+          <ScalarProperty Name="id_autor" ColumnName="id_autor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

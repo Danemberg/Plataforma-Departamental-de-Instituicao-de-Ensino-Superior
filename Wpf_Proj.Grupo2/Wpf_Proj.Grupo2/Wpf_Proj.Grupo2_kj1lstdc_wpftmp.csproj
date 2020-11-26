@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFEFD403-C871-4486-B990-38E6352A5B5F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Wpf_Proj.Grupo2</RootNamespace>
+    <AssemblyName>Wpf_Proj.Grupo2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autoria_Projeto.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Autoria_Publicacao.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Coordenador.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Departamento.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Diretor.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Docente.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Escola.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Instituicao.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaDepartamentoAdm.xaml.cs">
+      <DependentUpon>PaginaDepartamentoAdm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginadocente.xaml.cs">
+      <DependentUpon>Paginadocente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaEscolaAdm.xaml.cs">
+      <DependentUpon>PaginaEscolaAdm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Editar Informação Perfil.xaml.cs">
+      <DependentUpon>Pagina_Editar Informação Perfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plataforma Departamental.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Projeto.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Publicacao.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Página _Editar Publicação.xaml.cs">
+      <DependentUpon>Página _Editar Publicação.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilizador.cs">
+      <DependentUpon>Plataforma Departamental.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Paginadepartamento.xaml.cs">
+      <DependentUpon>Paginadepartamento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginaescola.xaml.cs">
+      <DependentUpon>Paginaescola.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plataforma Departamental.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Plataforma Departamental.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Plataforma Departamental.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Plataforma Departamental.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Plataforma Departamental.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Plataforma Departamental.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="Plataforma Departamental.edmx.diagram">
+      <DependentUpon>Plataforma Departamental.edmx</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Escola.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Plataforma Departamental.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Plataforma Departamental.Context.cs</LastGenOutput>
+      <DependentUpon>Plataforma Departamental.edmx</DependentUpon>
+    </Content>
+    <Content Include="Plataforma Departamental.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Plataforma Departamental.edmx</DependentUpon>
+      <LastGenOutput>Plataforma Departamental.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <ItemGroup>
+    <ReferencePath Include="C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll" />
+    <ReferencePath Include="C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Microsoft.CSharp.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\mscorlib.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\PresentationCore.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\PresentationFramework.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.ComponentModel.DataAnnotations.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Core.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.DataSetExtensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Net.Http.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Runtime.Serialization.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Security.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xaml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.Linq.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\WindowsBase.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\MainWindow.g.cs" />
+    <Compile Include="C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Paginadepartamento.g.cs" />
+    <Compile Include="C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\PaginaDepartamentoAdm.g.cs" />
+    <Compile Include="C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Paginadocente.g.cs" />
+    <Compile Include="C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Paginaescola.g.cs" />
+    <Compile Include="C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\PaginaEscolaAdm.g.cs" />
+    <Compile Include="C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Pagina_Editar Informação Perfil.g.cs" />
+    <Compile Include="C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Página Editar Projeto.g.cs" />
+    <Compile Include="C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Página _Editar Publicação.g.cs" />
+    <Compile Include="C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\App.g.cs" />
+    <Compile Include="C:\Users\rdane\OneDrive\Documentos\IPB\2º semestre\Projeto Integrado II\projeto-desktop\Wpf_Proj.Grupo2\Wpf_Proj.Grupo2\obj\Debug\Wpf_Proj.Grupo2_Content.g.cs" />
+  </ItemGroup>
+</Project>

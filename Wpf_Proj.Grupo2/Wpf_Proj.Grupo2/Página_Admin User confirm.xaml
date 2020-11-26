@@ -1,0 +1,29 @@
+﻿<Window x:Class="Wpf_Proj.Grupo2.Página_Admin_User_confirm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Proj.Grupo2"
+        mc:Ignorable="d"
+        Title="Página_Admin_User_confirm" Height="450" Width="800">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="0" Margin="0,0,0,349">
+        </Border>
+        <Image Source="Imagens/IPB(2).png" Margin="1,-2,440,346" />
+        <Image Source="/Imagens/IPB.png" Margin="-2,71,1,235" />
+
+        <Label Content="Foi enviado um codigo para o seu email!!!" FontSize="18" HorizontalAlignment="Left"  Margin="234,189,0,196" Width="342"/>
+        <TextBox x:Name="txt_codigo_enviado" BorderBrush="Black" Margin="272,266,274,119" />
+        <Label Content="Insira o codigo que lhe foi enviado" FontSize="15" HorizontalAlignment="Left"  Margin="260,235,0,150" Width="272"/>
+        <Label Content="Insira a nova senha" FontSize="15" HorizontalAlignment="Left"  Margin="316,296,0,89" Width="150"/>
+        <Label Content="Confirme_senha_inserida" FontSize="15" HorizontalAlignment="Left"  Margin="294,357,0,34" Width="182"/>
+       
+        <TextBox x:Name="txt_nova_senha" BorderBrush="Black" Margin="272,329,272,56" />
+        <TextBox x:Name="txt_confirme_senha" BorderBrush="Black" Margin="270,382,276,3" />
+        <Button x:Name="botao_Verificar" Content="VERIFICAR" HorizontalAlignment="Left" Margin="682,384,0,0" Width="100" Height="27" />
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="134" Margin="247,170,0,0" VerticalAlignment="Top" Width="308"/>
+        <Label Content="A palavra-passe foi alterada &#xD;&#xA;          com sucesso" FontSize="17" HorizontalAlignment="Left" Margin="292,186,0,0" VerticalAlignment="Top" Width="222" Height="57"/>
+        <Button Content="VOLTAR A HOME" HorizontalAlignment="Left" Margin="335,261,0,0" VerticalAlignment="Top" Width="116" Height="25"/>
+
+    </Grid>
+</Window>

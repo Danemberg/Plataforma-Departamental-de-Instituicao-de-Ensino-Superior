@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Grupo2_Plataforma_DepartamentalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Coordenador">
+    <Key>
+      <PropertyRef Name="id_docente" />
+    </Key>
+    <Property Name="id_docente" Type="Int32" Nullable="false" />
+    <Property Name="id_departamento" Type="Int32" />
+    <Property Name="data_inicio" Type="DateTime" Precision="3" />
+    <Property Name="data_fim" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Departamento" Relationship="Self.FK_Coordenador_Departamento" FromRole="Coordenador" ToRole="Departamento" />
+    <NavigationProperty Name="Docente" Relationship="Self.FK_Coordenador_Docente" FromRole="Coordenador" ToRole="Docente" />
+    <NavigationProperty Name="Docente1" Relationship="Grupo2_Plataforma_DepartamentalModel.FK_Coordenador_Docente1" FromRole="Coordenador" ToRole="Docente" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_escola" Type="Int32" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Coordenadors" Relationship="Self.FK_Coordenador_Departamento" FromRole="Departamento" ToRole="Coordenador" />
+    <NavigationProperty Name="Escola" Relationship="Self.FK_Departamento_Escola" FromRole="Departamento" ToRole="Escola" />
+  </EntityType>
+  <EntityType Name="Diretor">
+    <Key>
+      <PropertyRef Name="id_docente" />
+    </Key>
+    <Property Name="id_docente" Type="Int32" Nullable="false" />
+    <Property Name="id_escola" Type="Int32" Nullable="false" />
+    <Property Name="data_inicio" Type="DateTime" Precision="3" />
+    <Property Name="data_fim" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Docente" Relationship="Self.FK_Diretor_Docente" FromRole="Diretor" ToRole="Docente" />
+    <NavigationProperty Name="Escola" Relationship="Self.FK_Diretor_Escola" FromRole="Diretor" ToRole="Escola" />
+    <NavigationProperty Name="Docente1" Relationship="Grupo2_Plataforma_DepartamentalModel.FK_Diretor_Docente1" FromRole="Diretor" ToRole="Docente" />
+  </EntityType>
+  <EntityType Name="Docente">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_utilizador" Type="Int32" Nullable="false" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_departamento" Type="Int32" />
+    <NavigationProperty Name="Coordenadors" Relationship="Self.FK_Coordenador_Docente" FromRole="Docente" ToRole="Coordenador" />
+    <NavigationProperty Name="Diretors" Relationship="Self.FK_Diretor_Docente" FromRole="Docente" ToRole="Diretor" />
+    <NavigationProperty Name="Autoria_Publicacao" Relationship="Grupo2_Plataforma_DepartamentalModel.FK_Autoria_Publicacao_Docente" FromRole="Docente" ToRole="Autoria_Publicacao" />
+    <NavigationProperty Name="Utilizador" Relationship="Self.FK_Docente_Utilizador" FromRole="Docente" ToRole="Utilizador" />
+    <NavigationProperty Name="Autoria_Projeto" Relationship="Grupo2_Plataforma_DepartamentalModel.FK_Autoria_Projeto_Docente" FromRole="Docente" ToRole="Autoria_Projeto" />
+    <NavigationProperty Name="Coordenador" Relationship="Grupo2_Plataforma_DepartamentalModel.FK_Coordenador_Docente1" FromRole="Docente" ToRole="Coordenador" />
+    <NavigationProperty Name="Diretor" Relationship="Grupo2_Plataforma_DepartamentalModel.FK_Diretor_Docente1" FromRole="Docente" ToRole="Diretor" />
+  </EntityType>
+  <EntityType Name="Escola">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sigla" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_instituição" Type="Int32" />
+    <NavigationProperty Name="Departamentoes" Relationship="Self.FK_Departamento_Escola" FromRole="Escola" ToRole="Departamento" />
+    <NavigationProperty Name="Diretors" Relationship="Self.FK_Diretor_Escola" FromRole="Escola" ToRole="Diretor" />
+    <NavigationProperty Name="Instituicao" Relationship="Self.FK_Escola_Instituicao1" FromRole="Escola" ToRole="Instituicao" />
+  </EntityType>
+  <EntityType Name="Instituicao">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Escolas" Relationship="Self.FK_Escola_Instituicao1" FromRole="Instituicao" ToRole="Escola" />
+  </EntityType>
+  <EntityType Name="Projeto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="data_inicio" Type="DateTime" Precision="3" />
+    <Property Name="data_fim" Type="DateTime" Precision="3" />
+    <Property Name="local_realizacao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="valor_financiado" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Autoria_Projeto" Relationship="Grupo2_Plataforma_DepartamentalModel.FK_Autoria_Projeto_Projeto" FromRole="Projeto" ToRole="Autoria_Projeto" />
+  </EntityType>
+  <EntityType Name="Publicacao">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="data_finalizacao" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="local_realizacao" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tipo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Autoria_Publicacao" Relationship="Grupo2_Plataforma_DepartamentalModel.FK_Autoria_Publicacao_Publicacao1" FromRole="Publicacao" ToRole="Autoria_Publicacao" />
+  </EntityType>
+  <EntityType Name="Utilizador">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Docentes" Relationship="Self.FK_Docente_Utilizador" FromRole="Utilizador" ToRole="Docente" />
+  </EntityType>
+  <EntityType Name="Autoria_Publicacao">
+    <Key>
+      <PropertyRef Name="id_publicacao" />
+    </Key>
+    <Property Name="id_autor" Type="Int32" Nullable="false" />
+    <Property Name="id_publicacao" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Docente" Relationship="Self.FK_Autoria_Publicacao_Docente" FromRole="Autoria_Publicacao" ToRole="Docente" />
+    <NavigationProperty Name="Publicacao" Relationship="Self.FK_Autoria_Publicacao_Publicacao1" FromRole="Autoria_Publicacao" ToRole="Publicacao" />
+  </EntityType>
+  <Association Name="FK_Coordenador_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Coordenador" Type="Self.Coordenador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Coordenador">
+        <PropertyRef Name="id_departamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Coordenador_Docente">
+    <End Role="Docente" Type="Self.Docente" Multiplicity="0..1" />
+    <End Role="Coordenador" Type="Self.Coordenador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Docente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Coordenador">
+        <PropertyRef Name="id_departamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Departamento_Escola">
+    <End Role="Escola" Type="Self.Escola" Multiplicity="0..1" />
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escola">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Departamento">
+        <PropertyRef Name="id_escola" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Diretor_Docente">
+    <End Role="Docente" Type="Self.Docente" Multiplicity="1" />
+    <End Role="Diretor" Type="Self.Diretor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Docente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Diretor">
+        <PropertyRef Name="id_escola" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Diretor_Escola">
+    <End Role="Escola" Type="Self.Escola" Multiplicity="1" />
+    <End Role="Diretor" Type="Self.Diretor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escola">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Diretor">
+        <PropertyRef Name="id_escola" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Autoria_Publicacao_Docente">
+    <End Role="Docente" Type="Self.Docente" Multiplicity="1" />
+    <End Role="Autoria_Publicacao" Type="Self.Autoria_Publicacao" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Docente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Autoria_Publicacao">
+        <PropertyRef Name="id_publicacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Docente_Utilizador">
+    <End Role="Utilizador" Type="Self.Utilizador" Multiplicity="1" />
+    <End Role="Docente" Type="Self.Docente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilizador">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Docente">
+        <PropertyRef Name="id_utilizador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Escola_Instituicao1">
+    <End Role="Instituicao" Type="Self.Instituicao" Multiplicity="0..1" />
+    <End Role="Escola" Type="Self.Escola" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instituicao">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Escola">
+        <PropertyRef Name="id_instituição" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Autoria_Publicacao_Publicacao1">
+    <End Role="Publicacao" Type="Self.Publicacao" Multiplicity="1" />
+    <End Role="Autoria_Publicacao" Type="Self.Autoria_Publicacao" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Publicacao">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Autoria_Publicacao">
+        <PropertyRef Name="id_publicacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities_Grupo2_Plataforma_Departamental" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Coordenadors" EntityType="Self.Coordenador" />
+    <EntitySet Name="Departamentoes" EntityType="Self.Departamento" />
+    <EntitySet Name="Diretors" EntityType="Self.Diretor" />
+    <EntitySet Name="Docentes" EntityType="Self.Docente" />
+    <EntitySet Name="Escolas" EntityType="Self.Escola" />
+    <EntitySet Name="Instituicaos" EntityType="Self.Instituicao" />
+    <EntitySet Name="Projetoes" EntityType="Self.Projeto" />
+    <EntitySet Name="Publicacaos" EntityType="Self.Publicacao" />
+    <EntitySet Name="Utilizadors" EntityType="Self.Utilizador" />
+    <EntitySet Name="Autoria_Publicacao" EntityType="Self.Autoria_Publicacao" />
+    <AssociationSet Name="FK_Coordenador_Departamento" Association="Self.FK_Coordenador_Departamento">
+      <End Role="Departamento" EntitySet="Departamentoes" />
+      <End Role="Coordenador" EntitySet="Coordenadors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Coordenador_Docente" Association="Self.FK_Coordenador_Docente">
+      <End Role="Docente" EntitySet="Docentes" />
+      <End Role="Coordenador" EntitySet="Coordenadors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Departamento_Escola" Association="Self.FK_Departamento_Escola">
+      <End Role="Escola" EntitySet="Escolas" />
+      <End Role="Departamento" EntitySet="Departamentoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Diretor_Docente" Association="Self.FK_Diretor_Docente">
+      <End Role="Docente" EntitySet="Docentes" />
+      <End Role="Diretor" EntitySet="Diretors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Diretor_Escola" Association="Self.FK_Diretor_Escola">
+      <End Role="Escola" EntitySet="Escolas" />
+      <End Role="Diretor" EntitySet="Diretors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Autoria_Publicacao_Docente" Association="Self.FK_Autoria_Publicacao_Docente">
+      <End Role="Docente" EntitySet="Docentes" />
+      <End Role="Autoria_Publicacao" EntitySet="Autoria_Publicacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Docente_Utilizador" Association="Self.FK_Docente_Utilizador">
+      <End Role="Utilizador" EntitySet="Utilizadors" />
+      <End Role="Docente" EntitySet="Docentes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Escola_Instituicao1" Association="Self.FK_Escola_Instituicao1">
+      <End Role="Instituicao" EntitySet="Instituicaos" />
+      <End Role="Escola" EntitySet="Escolas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Autoria_Publicacao_Publicacao1" Association="Self.FK_Autoria_Publicacao_Publicacao1">
+      <End Role="Publicacao" EntitySet="Publicacaos" />
+      <End Role="Autoria_Publicacao" EntitySet="Autoria_Publicacao" />
+    </AssociationSet>
+    <EntitySet Name="Autoria_Projeto" EntityType="Grupo2_Plataforma_DepartamentalModel.Autoria_Projeto" />
+    <AssociationSet Name="FK_Autoria_Projeto_Docente" Association="Grupo2_Plataforma_DepartamentalModel.FK_Autoria_Projeto_Docente">
+      <End Role="Docente" EntitySet="Docentes" />
+      <End Role="Autoria_Projeto" EntitySet="Autoria_Projeto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Autoria_Projeto_Projeto" Association="Grupo2_Plataforma_DepartamentalModel.FK_Autoria_Projeto_Projeto">
+      <End Role="Projeto" EntitySet="Projetoes" />
+      <End Role="Autoria_Projeto" EntitySet="Autoria_Projeto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Coordenador_Docente1" Association="Grupo2_Plataforma_DepartamentalModel.FK_Coordenador_Docente1">
+      <End Role="Docente" EntitySet="Docentes" />
+      <End Role="Coordenador" EntitySet="Coordenadors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Diretor_Docente1" Association="Grupo2_Plataforma_DepartamentalModel.FK_Diretor_Docente1">
+      <End Role="Docente" EntitySet="Docentes" />
+      <End Role="Diretor" EntitySet="Diretors" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Autoria_Projeto">
+    <Key>
+      <PropertyRef Name="id_projeto" />
+    </Key>
+    <Property Name="id_autor" Type="Int32" Nullable="false" />
+    <Property Name="id_projeto" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Docente" Relationship="Grupo2_Plataforma_DepartamentalModel.FK_Autoria_Projeto_Docente" FromRole="Autoria_Projeto" ToRole="Docente" />
+    <NavigationProperty Name="Projeto" Relationship="Grupo2_Plataforma_DepartamentalModel.FK_Autoria_Projeto_Projeto" FromRole="Autoria_Projeto" ToRole="Projeto" />
+  </EntityType>
+  <Association Name="FK_Autoria_Projeto_Docente">
+    <End Type="Grupo2_Plataforma_DepartamentalModel.Docente" Role="Docente" Multiplicity="1" />
+    <End Type="Grupo2_Plataforma_DepartamentalModel.Autoria_Projeto" Role="Autoria_Projeto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Docente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Autoria_Projeto">
+        <PropertyRef Name="id_autor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Autoria_Projeto_Projeto">
+    <End Type="Grupo2_Plataforma_DepartamentalModel.Projeto" Role="Projeto" Multiplicity="1" />
+    <End Type="Grupo2_Plataforma_DepartamentalModel.Autoria_Projeto" Role="Autoria_Projeto" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Projeto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Autoria_Projeto">
+        <PropertyRef Name="id_projeto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Coordenador_Docente1">
+    <End Type="Grupo2_Plataforma_DepartamentalModel.Docente" Role="Docente" Multiplicity="1" />
+    <End Type="Grupo2_Plataforma_DepartamentalModel.Coordenador" Role="Coordenador" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Docente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Coordenador">
+        <PropertyRef Name="id_docente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Diretor_Docente1">
+    <End Type="Grupo2_Plataforma_DepartamentalModel.Docente" Role="Docente" Multiplicity="1" />
+    <End Type="Grupo2_Plataforma_DepartamentalModel.Diretor" Role="Diretor" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Docente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Diretor">
+        <PropertyRef Name="id_docente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
